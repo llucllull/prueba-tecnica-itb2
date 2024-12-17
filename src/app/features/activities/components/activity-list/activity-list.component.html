@@ -1,0 +1,11 @@
+<div class="activities-list">
+  @for (item of activities; track item){
+    <div class="activity">
+      <h3>{{item.title}}</h3>
+      <p>{{item.shortDescription}}</p>
+      @if (item.price){
+        <p>Precio: <span>{{item.price}}</span></p>
+      }
+    </div>
+  }
+</div>
