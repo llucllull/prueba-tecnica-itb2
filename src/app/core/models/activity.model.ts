@@ -8,6 +8,9 @@ export interface Activity {
   notIncludes: string;
   isActive: boolean;
   categories: Category[];
+  location: Location;
+  zones: Zone[];
+  price: number;
 }
 
 export interface Category {
@@ -23,4 +26,18 @@ export interface Media {
   externalUrl: string;
   contentUrl: string;
   alt: string;
+}
+
+export interface Location {
+  id: number;
+  name: string;
+  latitude: string;
+  longitude: string;
+}
+
+export interface Zone {
+  id: number;
+  name: string;
+  latitude: string;
+  longitude: string;
 }
