@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {SearchService} from "../../services/search-service.service";
 
 @Component({
   selector: 'app-search-bar',
@@ -9,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class SearchBarComponent {
 
+  constructor(private searchService: SearchService) {}
+
+  onSearch(event: Event) {
+    const input = event.target as HTMLInputElement;
+    const term = input.value;
+    this.searchService.updateSearchTerm(term);
+  }
 }
