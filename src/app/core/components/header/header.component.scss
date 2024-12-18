@@ -21,3 +21,18 @@ h3{
   color: rgb(105, 61, 45);
   margin: 0 !important;
 }
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    gap: 42%;
+    padding: 0 7%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    gap: 5%;
+    padding: 0 5%;
+    justify-content: space-between;
+  }
+}

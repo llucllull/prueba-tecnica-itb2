@@ -2,3 +2,15 @@ main{
   margin: 8% 9% 6% 9%;
 }
 
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  main{
+    margin: 14% 9% 6% 9%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main{
+    margin: 35% 9% 6% 9%;
+  }
+
+}
