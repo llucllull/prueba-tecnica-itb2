@@ -2,6 +2,7 @@
   @for (item of filteredActivities; track item){
     <div class="activity">
       <h3>{{item.title}}</h3>
+      <h5>{{item.categories[0].name}} - {{item.location.name}}</h5>
       <p>{{item.shortDescription}}</p>
       <p>Precio: <span>{{item.price}}€</span></p>
       <img [src]="getImageUrl(item.media[0].contentUrl)" class="hover-img" />
