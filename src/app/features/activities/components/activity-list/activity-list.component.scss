@@ -1,6 +1,4 @@
 .activities-list {
-  margin-left: 9%;
-  margin-right: 9%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 25px;
@@ -12,6 +10,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 
     &:nth-child(3n+1),
     &:nth-child(3n+2),
@@ -19,27 +18,43 @@
     &:nth-child(3n+4) {
       grid-column: span 3;
     }
+
+    .hover-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.8);
+      opacity: 0;
+      width: 90%;
+      height: auto;
+      border-radius: 15px;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    &:hover .hover-img {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
   }
 
-  h3{
+  h3 {
     font-family: "Playfair Display", serif;
     font-size: 22px;
     font-weight: bolder;
     color: rgb(105, 61, 45);
   }
 
-  p{
+  p {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     color: white;
   }
 
-  span{
+  span {
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: white;
     margin-top: auto;
   }
-
 }

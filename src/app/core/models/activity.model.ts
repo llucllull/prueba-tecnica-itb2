@@ -10,7 +10,8 @@ export interface Activity {
   categories: Category[];
   location: Location;
   zones: Zone[];
-  price: number;
+  price: string
+  media: Media[];
 }
 
 export interface Category {
@@ -20,12 +21,8 @@ export interface Category {
 }
 
 export interface Media {
-  id: number;
-  name: string;
-  type: string;
   externalUrl: string;
   contentUrl: string;
-  alt: string;
 }
 
 export interface Location {
